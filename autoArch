@@ -66,14 +66,11 @@ mount /dev/sda1 /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Install yay
 
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 # Install additional packages
 
 pacman -S --noconfirm networkmanager neovim openssh ttf-jetbrains-mono-nerd unicode-emoji noto-fonts-emoji rofi-emoji ttf-hack-nerd
-yay -S  --noconfirm  -q material-icons-git ttf-unifont otf-unifont font-awesome-5 
 
 # Enable NetworkManager service
 systemctl enable NetworkManager sshd
