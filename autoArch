@@ -68,11 +68,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install yay
 
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 # Install additional packages
 
 pacman -S --noconfirm networkmanager neovim openssh ttf-jetbrains-mono-nerd unicode-emoji noto-fonts-emoji rofi-emoji ttf-hack-nerd
-yay -s material-icons-git ttf-unifont otf-unifont font-awesome-5 
+yay -S  --noconfirm  -q material-icons-git ttf-unifont otf-unifont font-awesome-5 
 
 # Enable NetworkManager service
 systemctl enable NetworkManager sshd
