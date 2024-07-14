@@ -66,8 +66,13 @@ mount /dev/sda1 /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# Install yay
+
+
 # Install additional packages
-pacman -S --noconfirm networkmanager neovim openssh
+
+pacman -S --noconfirm networkmanager neovim openssh ttf-jetbrains-mono-nerd unicode-emoji noto-fonts-emoji rofi-emoji ttf-hack-nerd
+yay -s material-icons-git ttf-unifont otf-unifont font-awesome-5 
 
 # Enable NetworkManager service
 systemctl enable NetworkManager sshd
