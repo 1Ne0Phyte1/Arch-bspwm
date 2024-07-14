@@ -1,3 +1,8 @@
 #!/bin/bash
 
+# Install yay
+
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+yay -S  --noconfirm  -q material-icons-git ttf-unifont otf-unifont font-awesome-5 
+
 sudo pacman -S  ttf-jetbrains-mono-nerd
