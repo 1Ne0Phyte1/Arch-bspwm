@@ -1,0 +1,36 @@
+#[env]
+#TERM = "xterm-256color"
+
+import = [
+  # uncomment the flavour you want below:
+  #"~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+   "~/.config/alacritty/my_model_1.toml"
+]
+
+
+[window]
+decorations = "None"
+opacity = 0.9
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 15.0
+
+[font.normal]
+family = "Hack"
+style = "Bold"
+
+[cursor.style]
+shape = "Beam" #"Block", "Underline"
+blinking = "on"
+
+[selection]
+save_to_clipboard = true
+
+

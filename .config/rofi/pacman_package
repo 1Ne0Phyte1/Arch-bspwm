@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Fetch list of available packages from pacman
+packages=$(pacman -Slq | awk '!/\-/')
+
+# Use rofi to show a list of packages
+chosen=$(echo "$packages" | rofi -dmenu -i -p "Install Package:")
+
+# Check if a package was selected
+if [ -n "$chosen" ]; then
+    # Install the selected package using pacman
+    sudo pacman -S --noconfirm "$chosen"
+    # Optionally, you can add a notification after installation
+    printf "Installed $chosen\n"
+fi
+
