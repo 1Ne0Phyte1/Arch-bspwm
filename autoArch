@@ -28,6 +28,8 @@ pacstrap -K /mnt base linux linux-firmware
 # Generating fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
+mkinitcpio -P
+
 # Chroot into the installed system and execute commands inside
 arch-chroot /mnt /bin/bash <<EOF
 
