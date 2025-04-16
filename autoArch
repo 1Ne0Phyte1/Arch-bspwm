@@ -23,7 +23,7 @@ mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 
 # Installing base system
-pacstrap /mnt base linux linux-firmware
+pacstrap -K /mnt base linux linux-firmware
 
 # Generating fstab
 genfstab -U /mnt >> /mnt/etc/fstab
